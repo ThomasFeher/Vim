@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='D:/Programme/gVimPortable'
+let g:netrw_dirhist_2='D:/Programme'
+let g:netrw_dirhist_3='D:'
+let g:netrw_dirhist_4='D:/Daten'
