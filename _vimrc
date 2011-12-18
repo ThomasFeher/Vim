@@ -1,13 +1,13 @@
-" An example for a vimrc file.
+" example for a vimrc file.
 "
-" Maintainer:	Bram Moolenaar <Bram@vim.org>
-" Last change:	2008 Jul 02
+" Maintainer: Bram Moolenaar <Bram@vim.org>
+" Last change: 2008 Jul 02
 "
 " To use it, copy it to
-"     for Unix and OS/2:  ~/.vimrc
-"	      for Amiga:  s:.vimrc
-"  for MS-DOS and Win32:  $VIM\_vimrc
-"	    for OpenVMS:  sys$login:.vimrc
+" for Unix and OS/2: ~/.vimrc
+" for Amiga: s:.vimrc
+" for MS-DOS and Win32: $VIM\_vimrc
+" for OpenVMS: sys$login:.vimrc
 
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
@@ -21,15 +21,18 @@ set nocompatible
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
+set shiftwidth=4
+set tabstop=4
+
 if has("vms")
-  set nobackup		" do not keep a backup file, use versions instead
+  set nobackup " do not keep a backup file, use versions instead
 else
-  set backup		" keep a backup file
+  set backup " keep a backup file
 endif
-set history=50		" keep 50 lines of command line history
-set ruler		" show the cursor position all the time
-set showcmd		" display incomplete commands
-set incsearch		" do incremental searching
+set history=50 " keep 50 lines of command line history
+set ruler " show the cursor position all the time
+set showcmd " display incomplete commands
+set incsearch " do incremental searching
 
 " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
 " let &guioptions = substitute(&guioptions, "t", "", "g")
@@ -37,7 +40,7 @@ set incsearch		" do incremental searching
 " Don't use Ex mode, use Q for formatting
 map Q gq
 
-" CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
+" CTRL-U in insert mode deletes a lot. Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
 
@@ -76,14 +79,14 @@ if has("autocmd")
   " position when opening a file.
   autocmd BufReadPost *
     \ if line("'\"") > 1 && line("'\"") <= line("$") |
-    \   exe "normal! g`\"" |
+    \ exe "normal! g`\"" |
     \ endif
 
   augroup END
 
 else
 
-  set autoindent		" always set autoindenting on
+  set autoindent " always set autoindenting on
 
 endif " has("autocmd")
 
@@ -92,14 +95,21 @@ endif " has("autocmd")
 " Only define it when not defined already.
 if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
-		  \ | wincmd p | diffthis
+\ | wincmd p | diffthis
 endif
 
-:colorscheme molokai
-let mapleader="�"
-let g:mapleader="�"
+colorscheme molokai
+
+let mapleader="ß"
+let g:mapleader="ß"
 " mapleader should not time out
-:set notimeout
+" set notimeout
+
+inoremap üü <Esc>
+nnoremap öö :w<CR>
+
+" toggle taglist
+nnoremap <leader>tt :TlistToggle<CR>
 
 " Move entire line/block up and down
 nnoremap <C-S-DOWN> :m+<CR>==
@@ -111,21 +121,32 @@ vnoremap <C-S-UP> :m-2<CR>gv=gv
 
 " Highlight on overlenght
 if exists('+colorcolumn')
-set colorcolumn=79
-highlight link OverLength ColorColumn
-exec 'match OverLength /\%'.&cc.'v.\+/'
-endif
+	set colorcolumn=79
+	highlight link OverLength ColorColumn
+	exec 'match OverLength /\%'.&cc.'v.\+/'
+else
+	au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>79v.\+', -1)
+endif 
 
 " Quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 " navigate between windows
-nmap <leader><left> <C-w>h
-nmap <leader><right> <C-w>l
-nmap <leader><up> <C-w>k
-nmap <leader><down> <C-w>j
+nnoremap <leader><left> <C-W>h
+nnoremap <leader><right> <C-W>l
+nnoremap <leader><up> <C-W>k
+nnoremap <leader><down> <C-W>j
 
-set guifont=Lucida_Console:h8:cANSI
+" tag navigation
+nnoremap <leader><CR> <C-]>
+nnoremap <leader><insert> <C-T>
+
+set guifont=Monospace\ 8,\ Lucida_Console:h8:cANSI
+"set guifont=Monospace\ 10
+"set guifont=Lucida_Console:h8:cANSI
+
+" hide toolbar
+set guioptions-=T
 
 call pathogen#infect()
