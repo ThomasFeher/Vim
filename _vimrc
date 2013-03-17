@@ -149,4 +149,7 @@ set guifont=Monospace\ 8,\ Lucida_Console:h8:cANSI
 " hide toolbar
 set guioptions-=T
 
+" force 256 color support
+set t_Co=256
+
 call pathogen#infect()
