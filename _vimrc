@@ -98,7 +98,7 @@ if !exists(":DiffOrig")
 \ | wincmd p | diffthis
 endif
 
-colorscheme molokai
+"colorscheme molokai
 
 let mapleader="ß"
 let g:mapleader="ß"
@@ -150,6 +150,11 @@ set guifont=Monospace\ 8,\ Lucida_Console:h8:cANSI
 set guioptions-=T
 
 " force 256 color support
-set t_Co=256
+" set t_Co=256
+set t_Co=16
 
 call pathogen#infect()
+
+syntax enable
+set background=dark
+colorscheme solarized
