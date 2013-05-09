@@ -112,12 +112,12 @@ nnoremap öö :w<CR>
 nnoremap <leader>tt :TlistToggle<CR>
 
 " Move entire line/block up and down
-nnoremap <C-S-DOWN> :m+<CR>==
-nnoremap <C-S-UP> :m-2<CR>==
-inoremap <C-S-DOWN> <Esc>:m+<CR>==gi
-inoremap <C-S-UP> <Esc>:m-2<CR>==gi
-vnoremap <C-S-DOWN> :m'>+<CR>gv=gv
-vnoremap <C-S-UP> :m-2<CR>gv=gv
+"nnoremap <C-S-DOWN> :m+<CR>==
+"nnoremap <C-S-UP> :m-2<CR>==
+"inoremap <C-S-DOWN> <Esc>:m+<CR>==gi
+"inoremap <C-S-UP> <Esc>:m-2<CR>==gi
+"vnoremap <C-S-DOWN> :m'>+<CR>gv=gv
+"vnoremap <C-S-UP> :m-2<CR>gv=gv
 
 " Highlight on overlenght
 if exists('+colorcolumn')
@@ -158,3 +158,6 @@ call pathogen#infect()
 syntax enable
 set background=dark
 colorscheme solarized
+
+" prevent vim-latex macro expansion
+let g:Imap_FreezeImap=1
