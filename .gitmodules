@@ -10,3 +10,6 @@
 [submodule "bundle/autotag"]
 	path = bundle/autotag
 	url = git@github.com:vim-scripts/AutoTag.git
+[submodule "bundle/delimitMate"]
+	path = bundle/delimitMate
+	url = git@github.com:Raimondi/delimitMate.git
