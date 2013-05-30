@@ -161,3 +161,8 @@ colorscheme solarized
 
 " prevent vim-latex macro expansion
 let g:Imap_FreezeImap=1
+
+" settings for ultisnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
