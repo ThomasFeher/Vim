@@ -22,6 +22,7 @@
 [submodule "bundle/ultisnips"]
 	path = bundle/ultisnips
 	url = git@github.com:SirVer/ultisnips.git
+	ignore = untracked
 [submodule "bundle/Smart-Tabs"]
 	path = bundle/Smart-Tabs
 	url = git@github.com:vim-scripts/Smart-Tabs.git
