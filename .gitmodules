@@ -32,3 +32,6 @@
 [submodule "bundle/octave"]
 	path = bundle/octave
 	url = git@github.com:MPogoda/octave.vim--.git
+[submodule "bundle/Conque-GDB"]
+	path = bundle/Conque-GDB
+	url = https://github.com/vim-scripts/Conque-GDB.git
