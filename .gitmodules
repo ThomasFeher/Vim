@@ -35,3 +35,6 @@
 [submodule "bundle/Conque-GDB"]
 	path = bundle/Conque-GDB
 	url = https://github.com/vim-scripts/Conque-GDB.git
+[submodule "bundle/clang_complete"]
+	path = bundle/clang_complete
+	url = https://github.com/Rip-Rip/clang_complete.git
