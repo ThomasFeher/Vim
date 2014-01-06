@@ -26,3 +26,6 @@
 [submodule "bundle/Smart-Tabs"]
 	path = bundle/Smart-Tabs
 	url = git@github.com:vim-scripts/Smart-Tabs.git
+[submodule "bundle/taglist"]
+	path = bundle/taglist
+	url = https://github.com/yazug/vim-taglist-plus.git

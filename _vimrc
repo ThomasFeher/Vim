@@ -110,6 +110,9 @@ nnoremap öö :w<CR>
 
 " toggle taglist
 nnoremap <leader>tt :TlistToggle<CR>
+let Tlist_GainFocus_On_ToggleOpen = 1 " Jump to taglist window on open.
+let Tlist_Close_On_Select = 1 " Close the taglist window when a file or tag is selected.
+let Tlist_WinWidth = 60
 
 " Move entire line/block up and down
 "nnoremap <C-S-DOWN> :m+<CR>==
