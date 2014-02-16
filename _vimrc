@@ -156,6 +156,10 @@ set guioptions-=T
 " set t_Co=256
 set t_Co=16
 
+" powerline
+set laststatus=2
+set rtp+=/usr/lib/python2.7/site-packages/powerline/bindings/vim
+
 call pathogen#infect()
 
 syntax enable
