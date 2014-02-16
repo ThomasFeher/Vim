@@ -162,8 +162,11 @@ syntax enable
 set background=dark
 colorscheme solarized
 
-" prevent vim-latex macro expansion
-let g:Imap_FreezeImap=1
+" vim-latex 
+let g:Tex_DefaultTargetFormat = 'pdf'
+let g:Tex_MultipleCompileFormats = 'dvi,pdf'
+let g:Imap_FreezeImap=1 " prevent macro expansion
+
 
 " settings for ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
