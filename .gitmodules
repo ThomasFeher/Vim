@@ -29,3 +29,6 @@
 [submodule "bundle/taglist"]
 	path = bundle/taglist
 	url = https://github.com/yazug/vim-taglist-plus.git
+[submodule "bundle/octave"]
+	path = bundle/octave
+	url = git@github.com:MPogoda/octave.vim--.git

@@ -106,7 +106,7 @@ let g:mapleader="ß"
 " set notimeout
 
 inoremap üü <Esc>
-nnoremap öö :w<CR>
+nnoremap ö :w<CR>
 
 " toggle taglist
 nnoremap <leader>tt :TlistToggle<CR>
@@ -171,8 +171,12 @@ let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_MultipleCompileFormats = 'dvi,pdf'
 let g:Imap_FreezeImap=1 " prevent macro expansion
 
-
 " settings for ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+" Octave syntax
+augroup filetypedetect
+	au! BufRead,BufNewFile *.m,*.oct set filetype=octave
+augroup END
