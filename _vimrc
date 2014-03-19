@@ -112,6 +112,11 @@ nnoremap ö :w<CR>
 nnoremap <leader>tt :TlistToggle<CR>
 let Tlist_GainFocus_On_ToggleOpen = 1 " Jump to taglist window on open.
 let Tlist_Close_On_Select = 1 " Close the taglist window when a file or tag is selected.
+"taglist automatic folding of unvisible files
+let Tlist_File_Fold_Auto_Close=1
+" display prototypes intstead of tags (used only because of ctags bug with
+" pjsip
+let Tlist_Display_Prototype=1
 let Tlist_WinWidth = 60
 
 " Move entire line/block up and down
@@ -140,10 +145,26 @@ nnoremap <leader><left> <C-W>h
 nnoremap <leader><right> <C-W>l
 nnoremap <leader><up> <C-W>k
 nnoremap <leader><down> <C-W>j
+nnoremap <leader><home> 0<C-W>w
 
 " tag navigation
+	"jump to tag
 nnoremap <leader><CR> <C-]>
+	" jump to tag in new vertical split
+	" show tag in preview window
+nnoremap <leader>~ <C-W>}
+	" close preview window
+nnoremap <leader><Bar> <C-W>z
+	"back to last jump position
+"nmap <leader><insert> <C-T>
 nnoremap <leader><insert> <C-T>
+" programming
+"nnoremap cn :cn<return>
+"nnoremap cp :cp<return>
+" ignore warnings in quickfix window !!use with care!!
+"set errorformat^=%-G%f:%l:\ warning:%m
+" ignore notes in quickfix window !!use with care!!
+"set errorformat^=%-G%f:%l:\ note:%m
 
 set guifont=Monospace\ 8,\ Lucida_Console:h8:cANSI
 "set guifont=Monospace\ 10
