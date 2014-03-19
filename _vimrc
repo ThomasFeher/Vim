@@ -177,11 +177,15 @@ set guioptions-=T
 " set t_Co=256
 set t_Co=16
 
+" disable autotag, set to 0 or delete to activate autotag
+"let g:autotag_vim_version_sourced=1
+
 " powerline
 set laststatus=2
 set rtp+=/usr/lib/python2.7/site-packages/powerline/bindings/vim
 
 call pathogen#infect()
+Helptags
 
 syntax enable
 set background=dark
