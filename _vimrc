@@ -166,6 +166,10 @@ nnoremap <leader><insert> <C-T>
 " ignore notes in quickfix window !!use with care!!
 "set errorformat^=%-G%f:%l:\ note:%m
 
+" fold navigation
+nmap z<up> zk
+nmap z<down> zj
+
 set guifont=Monospace\ 8,\ Lucida_Console:h8:cANSI
 "set guifont=Monospace\ 10
 "set guifont=Lucida_Console:h8:cANSI
