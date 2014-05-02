@@ -208,18 +208,6 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
-" Octave syntax
-augroup filetypedetect
-	au! BufRead,BufNewFile *.m,*.oct set filetype=octave
-augroup END
-" Use keywords from Octave syntax language file for autocomplete
-if has("autocmd") && exists("+omnifunc")
-	autocmd Filetype octave
-				\ if &omnifunc == "" |
-				\ setlocal omnifunc=syntaxcomplete#Complete |
-				\ endif
-endif
-
 " clang complete
 let g:clang_snippets=1
 "let g:clang_snippets_engine = 'clang_complete'
