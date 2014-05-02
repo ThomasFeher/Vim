@@ -102,6 +102,7 @@ endif
 
 let mapleader="ß"
 let g:mapleader="ß"
+let maplocalleader = "ß"
 " mapleader should not time out
 " set notimeout
 
