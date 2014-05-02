@@ -229,3 +229,6 @@ let g:clang_close_preview=1
 "let g:clang_debug=1
 "let g:clang_complete_auto = 1
 "let g:clang_complete_copen = 1
+
+" LaTeX-Box
+let g:LatexBox_output_type = "pdf"
