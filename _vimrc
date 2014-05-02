@@ -195,11 +195,6 @@ syntax enable
 set background=dark
 colorscheme solarized
 
-" vim-latex 
-let g:Tex_DefaultTargetFormat = 'pdf'
-let g:Tex_MultipleCompileFormats = 'dvi,pdf'
-let g:Imap_FreezeImap=1 " prevent macro expansion
-
 " quit ConqueTerm when program running in ConqueTerm quits
 let g:ConqueTerm_CloseOnEnd = 1
 
