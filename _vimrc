@@ -201,6 +201,7 @@ let g:ConqueTerm_CloseOnEnd = 1
 
 " settings for ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsListSnippets="<leader><tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
