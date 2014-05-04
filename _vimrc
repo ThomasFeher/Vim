@@ -217,3 +217,5 @@ let g:clang_close_preview=1
 
 " LaTeX-Box
 let g:LatexBox_output_type = "pdf"
+let g:LatexBox_quickfix = 2 " do not jump to quickfix window
+let g:LatexBox_Folding = 1
