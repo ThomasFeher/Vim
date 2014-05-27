@@ -50,3 +50,6 @@
 [submodule "bundle/vinegar"]
 	path = bundle/vinegar
 	url = git://github.com/tpope/vim-vinegar.git
+[submodule "bundle/characterize"]
+	path = bundle/characterize
+	url = git://github.com/tpope/vim-characterize.git
