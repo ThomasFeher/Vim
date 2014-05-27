@@ -53,3 +53,6 @@
 [submodule "bundle/characterize"]
 	path = bundle/characterize
 	url = git://github.com/tpope/vim-characterize.git
+[submodule "bundle/fugitive"]
+	path = bundle/fugitive
+	url = git://github.com/tpope/vim-fugitive.git
