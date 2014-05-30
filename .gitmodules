@@ -62,3 +62,6 @@
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "bundle/i3-syntax"]
+	path = bundle/i3-syntax
+	url = git@github.com:PotatoesMaster/i3-vim-syntax.git
