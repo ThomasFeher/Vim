@@ -189,6 +189,8 @@ set t_Co=16
 set laststatus=2
 set rtp+=/usr/lib/python2.7/site-packages/powerline/bindings/vim
 
+set diffopt=filler,vertical
+
 " To disable a plugin, add it's bundle name to the following list
 let g:pathogen_disabled = ['OmniCppComplete']
 
