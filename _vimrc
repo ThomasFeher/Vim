@@ -230,5 +230,8 @@ let g:LatexBox_Folding = 1
 " set language to english independent of system language
 let g:fugitive_git_executable = 'LANG=en_US git'
 
+" syntastic
 " make syntastic C++11 aware
 let g:syntastic_cpp_compiler_options = ' -std=c++11'
+" use location list (jump to errors with :lne and :lp)
+let g:syntastic_always_populate_loc_list=1
