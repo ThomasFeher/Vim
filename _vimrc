@@ -226,6 +226,7 @@ let g:clang_close_preview=1
 let g:LatexBox_output_type = "pdf"
 let g:LatexBox_quickfix = 2 " do not jump to quickfix window
 let g:LatexBox_Folding = 1
+let g:LatexBox_latexmk_preview_continuously = 1 " continuous latexmk mode
 
 " set language to english independent of system language
 let g:fugitive_git_executable = 'LANG=en_US git'
