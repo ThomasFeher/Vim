@@ -214,8 +214,8 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " clang complete
 let g:clang_snippets=1
-"let g:clang_snippets_engine = 'clang_complete'
-let g:clang_snippets_engine = 'ultisnips'
+let g:clang_snippets_engine = 'clang_complete'
+"let g:clang_snippets_engine = 'ultisnips'
 let g:clang_close_preview=1
 " to debug clang complete
 "let g:clang_debug=1
