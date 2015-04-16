@@ -194,7 +194,7 @@ set diffopt=filler,vertical
 nnoremap <leader>gs :Gstatus<CR>
 
 " To disable a plugin, add it's bundle name to the following list
-let g:pathogen_disabled = ['OmniCppComplete']
+let g:pathogen_disabled = ['OmniCppComplete','clang_complete','supertab']
 
 call pathogen#infect()
 Helptags
@@ -205,12 +205,6 @@ colorscheme solarized
 
 " quit ConqueTerm when program running in ConqueTerm quits
 let g:ConqueTerm_CloseOnEnd = 1
-
-" settings for ultisnips
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsListSnippets="<leader><tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " clang complete
 let g:clang_snippets=1
