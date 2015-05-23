@@ -229,3 +229,11 @@ let g:fugitive_git_executable = 'LANG=en_US git'
 let g:syntastic_cpp_compiler_options = ' -std=c++11'
 " use location list (jump to errors with :lne and :lp)
 let g:syntastic_always_populate_loc_list=1
+
+" YouCompleteMe
+let g:ycm_complete_in_comments = 1
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
+let g:ycm_seed_identifiers_with_syntax = 1
+" do not use TAB, this should be kept for UltiSnips
+let g:ycm_key_list_select_completion = ['<Down>']
+let g:ycm_key_list_previous_completion = ['<Up>']
