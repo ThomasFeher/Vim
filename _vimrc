@@ -186,6 +186,9 @@ set t_Co=16
 "let g:autotag_vim_version_sourced=1
 
 " powerline
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
 set laststatus=2
 set rtp+=/usr/lib/python2.7/site-packages/powerline/bindings/vim
 
