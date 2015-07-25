@@ -197,7 +197,7 @@ set diffopt=filler,vertical
 nnoremap <leader>gs :Gstatus<CR>
 
 " To disable a plugin, add it's bundle name to the following list
-let g:pathogen_disabled = ['OmniCppComplete','clang_complete','supertab']
+let g:pathogen_disabled = ['OmniCppComplete','clang_complete']
 
 call pathogen#infect()
 Helptags
@@ -233,10 +233,17 @@ let g:syntastic_cpp_compiler_options = ' -std=c++11'
 " use location list (jump to errors with :lne and :lp)
 let g:syntastic_always_populate_loc_list=1
 
+" settings for ultisnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsListSnippets="<leader><tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
 " YouCompleteMe
 let g:ycm_complete_in_comments = 1
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
 let g:ycm_seed_identifiers_with_syntax = 1
-" do not use TAB, this should be kept for UltiSnips
-let g:ycm_key_list_select_completion = ['<Down>']
-let g:ycm_key_list_previous_completion = ['<Up>']
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
