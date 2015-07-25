@@ -238,6 +238,8 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsListSnippets="<leader><tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+" with python 3 snippets are not shown in YouCompleteMe list
+let g:UltiSnipsUsePythonVersion = 2
 
 " YouCompleteMe
 let g:ycm_complete_in_comments = 1
