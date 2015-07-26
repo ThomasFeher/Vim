@@ -4,3 +4,8 @@ spell/*.spl
 .netrwhist*
 /view/
 spell/de.utf-8.add.spl
+
+# plugins are managed by vundle, so we only need to track vundle itself in the
+# bundle directory
+bundle/
+!bundle/Vundle.vim

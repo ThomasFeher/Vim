@@ -1,13 +1,60 @@
-" example for a vimrc file.
+" start of Vundle section
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" color scheme
+Plugin 'altercation/vim-colors-solarized'
+
+" LaTex
+Plugin 'LaTeX-Box-Team/LaTeX-Box'
+
+" autocompletion
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+
+" git integration
+Plugin 'tpope/vim-fugitive'
+Plugin 'gregsexton/gitv'
+
+" others
+Plugin 'ervandew/supertab'
+Plugin 'MPogoda/octave.vim--'
+Plugin 'tpope/vim-vinegar'
+Plugin 'tpope/vim-characterize'
+Plugin 'tpope/vim-eunuch' " Move, Chmod, etc.
+Plugin 'scrooloose/syntastic' " syntax checker
+Plugin 'PotatoesMaster/i3-vim-syntax'
+Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'Raimondi/delimitMate'
+
 "
-" Maintainer: Bram Moolenaar <Bram@vim.org>
-" Last change: 2008 Jul 02
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
 "
-" To use it, copy it to
-" for Unix and OS/2: ~/.vimrc
-" for Amiga: s:.vimrc
-" for MS-DOS and Win32: $VIM\_vimrc
-" for OpenVMS: sys$login:.vimrc
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+"
+" end of Vundle section
 
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
@@ -196,11 +243,10 @@ set rtp+=/usr/lib/python2.7/site-packages/powerline/bindings/vim
 set diffopt=filler,vertical
 nnoremap <leader>gs :Gstatus<CR>
 
-" To disable a plugin, add it's bundle name to the following list
-let g:pathogen_disabled = ['OmniCppComplete','clang_complete']
-
-call pathogen#infect()
-Helptags
+" gitv
+nmap <leader>gv :Gitv --all<cr>
+nmap <leader>gV :Gitv! --all<cr>
+vmap <leader>gV :Gitv! --all<cr>
 
 syntax enable
 set background=dark
