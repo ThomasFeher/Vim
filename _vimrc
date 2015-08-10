@@ -158,13 +158,13 @@ nnoremap ö :w<CR>
 
 " toggle taglist
 nnoremap <leader>tt :TlistToggle<CR>
-let Tlist_GainFocus_On_ToggleOpen = 1 " Jump to taglist window on open.
-let Tlist_Close_On_Select = 1 " Close the taglist window when a file or tag is selected.
+let Tlist_GainFocus_On_ToggleOpen = 0 " Jump to taglist window on open.
+let Tlist_Close_On_Select = 0 " Close the taglist window when a file or tag is selected.
 "taglist automatic folding of unvisible files
 let Tlist_File_Fold_Auto_Close=1
 " display prototypes intstead of tags (used only because of ctags bug with
 " pjsip
-let Tlist_Display_Prototype=1
+let Tlist_Display_Prototype=0
 let Tlist_WinWidth = 60
 
 " Move entire line/block up and down
