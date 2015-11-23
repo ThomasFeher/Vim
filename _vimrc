@@ -163,6 +163,10 @@ let maplocalleader = "ß"
 inoremap üü <Esc>
 nnoremap ö :w<CR>
 
+" search for selected text
+" source: http://vim.wikia.com/wiki/Search_for_visually_selected_text
+vnoremap // y/<C-R>"<CR>
+
 " toggle taglist
 nnoremap <leader>tt :TlistToggle<CR>
 let Tlist_GainFocus_On_ToggleOpen = 0 " Jump to taglist window on open.
