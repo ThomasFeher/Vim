@@ -263,6 +263,9 @@ syntax enable
 set background=dark
 colorscheme solarized
 
+" clang-format
+map <leader>f :pyfile /usr/share/clang/clang-format.py<cr>
+
 " quit ConqueTerm when program running in ConqueTerm quits
 let g:ConqueTerm_CloseOnEnd = 1
 
