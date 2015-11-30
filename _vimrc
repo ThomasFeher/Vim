@@ -40,6 +40,7 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'PProvost/vim-ps1'
 Plugin 'yazug/vim-taglist-plus'
 Plugin 'jceb/vim-orgmode'
+Plugin 'vimwiki/vimwiki'
 
 "
 " All of your Plugins must be added before the following line
